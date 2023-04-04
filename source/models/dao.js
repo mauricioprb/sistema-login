@@ -14,5 +14,5 @@ async function getConnection() {
 }
 
 module.exports = {
-    getConnection
+    getConnection,
 };
