@@ -1,0 +1,144 @@
+.formulario {
+    background: var(--cor-branco);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.formulario h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.formulario input {
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid var(--cor-branco-30);
+    background: var(--cor-branco);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    padding: 8px;
+    color: var(--cor-cinza-escuro);
+    font: 400 0.9rem/1.17 "Roboto", sans-serif;
+}
+
+.formulario-email {
+    margin-bottom: 24px;
+}
+
+/* Remove os estilos padrão do formulário */
+.formulario input:focus {
+    outline: none;
+    border: 1px solid var(--cor-principal);
+    transition: 0.4s;
+}
+
+.formulario input::placeholder {
+    color: var(--cor-cinza-10);
+}
+
+.formulario-recuperacao-descricao {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.formulario-botao {
+    display: inline-block;
+    height: 40px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    width: 100%;
+    background: var(--cor-cinza-escuro);
+    border-radius: 6px;
+    color: var(--cor-branco);
+    font: 500 0.9rem/1.17 "Roboto", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario-botao-continuar {
+    display: inline-block;
+    height: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    background: var(--cor-cinza-escuro);
+    border-radius: 6px;
+    color: var(--cor-branco);
+    font: 500 0.9rem/1.17 "Roboto", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario-botao:hover {
+    background-color: var(--cor-principal);
+    transition: 0.4s;
+}
+
+.formulario-conta {
+    text-align: center;
+    color: var(--cor-cinza-20);
+}
+
+.formulario-registro {
+    color: var(--cor-cinza-escuro);
+}
+
+.formulario-registro:hover {
+    color: var(--cor-principal);
+    transition: 0.4s;
+}
+
+.formulario-senha {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-senha a {
+    color: var(--cor-cinza-escuro);
+}
+
+.formulario-senha a:hover {
+    color: var(--cor-principal);
+    transition: 0.4s;
+}
+
+.formulario-senha-icon {
+    position: relative;
+}
+
+.formulario-mostrar-senha {
+    position: absolute;
+    top: 29px;
+    right: 8px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../img/icons/ver_senha.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.formulario-mostrar-senha:hover {
+    filter: invert(100%) hue-rotate(180deg);
+    transition: 0.3s;
+}
+
+.formulario-erro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}

@@ -1,0 +1,12 @@
+/* Estilos globais */
+@import "./global/global.css";
+
+/* Estilos úteis */
+@import "./util/cores.css";
+@import "./util/tipografia.css";
+@import "./util/componentes.css";
+
+/* Página de login */
+@import "./login/formulario.css";
+@import "./login/dicas.css";
+@import "./login/footer.css";

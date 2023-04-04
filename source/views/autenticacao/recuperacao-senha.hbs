@@ -1,0 +1,36 @@
+<canvas id="gradient-canvas"></canvas>
+<div class="container-main">
+    <section class="formulario">
+        <form method="POST" action="/recuperar-senha">
+            <h2 class="tipografia-display-medio cor-cinza-escuro">Recuperação de Senha</h2>
+            <p class="tipografia-texto-normal cor-cinza-20 formulario-recuperacao-descricao">Informe o e-mail associado à sua conta para que possamos enviar sua senha.</p>
+            <div>
+                <label for="email" class="tipografia-texto-normal cor-cinza-20">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" class="formulario-email">
+            </div>
+            {{#if erro}}
+                <span class="tipografia-texto-medio cor-erro formulario-erro">
+                    <img src="/img/icons/alerta.svg">
+                    {{erro}}
+                </span>
+            {{/if}}
+            <button type="submit" class="formulario-botao-continuar">Continuar</button>
+        </form>
+        <p class="tipografia-texto-medio formulario-conta">Lembrou da senha? <a href="login" class="formulario-registro">Voltar para o login</a></p>
+    </section>
+    <section class="dicas container">
+        <span class="tipografia-texto-pequeno cor-cinza-20 dicas-tag">
+            <img src="/img/icons/cadeado.svg">
+            Dica de segurança
+        </span>
+        <p class="tipografia-texto-pequeno dicas-texto">Crie senhas fortes com combinações de letras maiúsculas, minúsculas, números e caracteres especiais. Evite reutilizá-las em múltiplas contas para proteger a integridade de seus dados.</p>
+    </section>
+</div>
+<footer class="footer">
+    <p class="tipografia-texto-normal cor-cinza-20">© Todos os direitos reservados</p>
+    <div class="footer-links">
+        <a href="#" class="tipografia-texto-medio cor-principal">Termos e Privacidade</a>
+        <span class="footer-separador"></span>
+        <a href="#" class="tipografia-texto-medio cor-principal">Contato</a>
+    </div>
+</footer>

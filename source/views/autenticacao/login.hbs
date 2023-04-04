@@ -1,0 +1,46 @@
+<canvas id="gradient-canvas"></canvas>
+<div class="container-main">
+    <section class="formulario">
+        <form method="POST" action="/login">
+            <h1 class="tipografia-display-medio cor-cinza-escuro">Fazer Login</h1>
+            <div>
+                <label for="email" class="tipografia-texto-normal cor-cinza-20">E-mail ou usuário</label>
+                <input type="text" id="email" name="email" placeholder="exemplo@email.com" class="formulario-email">
+            </div>
+            <div class="formulario-senha">
+                <label for="senha" class="tipografia-texto-normal cor-cinza-20">Senha</label>
+                <a href="recuperacao-senha" class="tipografia-texto-medio">Esqueceu sua senha?</a>
+            </div>
+            <div class="formulario-senha-icon">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                  <span id="mostrar-senha" class="formulario-mostrar-senha"></span>
+            </div>
+            {{#if erro}}
+                <span class="tipografia-texto-medio cor-erro formulario-erro">
+                    <img src="/img/icons/alerta.svg">
+                    {{erro}}
+                </span>
+            {{/if}}
+            <button type="submit" class="formulario-botao">Entrar</button>
+        </form>
+        <p class="tipografia-texto-medio formulario-conta">Não tem uma conta? <a href="#"
+                class="formulario-registro">Registre-se</a></p>
+    </section>
+    <section class="dicas container">
+        <span class="tipografia-texto-pequeno cor-cinza-20 dicas-tag">
+            <img src="/img/icons/cadeado.svg">
+            Dica de segurança
+        </span>
+        <p class="tipografia-texto-pequeno dicas-texto">Lembre-se: após três tentativas de login malsucedidas, sua conta
+            será bloqueada por motivos de segurança. Caso tenha esquecido sua senha,
+            não hesite em <a href="recuperacao-senha" class="dicas-senha">redefini-la</a>.</p>
+    </section>
+</div>
+<footer class="footer">
+    <p class="tipografia-texto-normal cor-cinza-20">© Todos os direitos reservados</p>
+    <div class="footer-links">
+        <a href="#" class="tipografia-texto-medio cor-principal">Termos e Privacidade</a>
+        <span class="footer-separador"></span>
+        <a href="#" class="tipografia-texto-medio cor-principal">Contato</a>
+    </div>
+</footer>

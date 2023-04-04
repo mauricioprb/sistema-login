@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: var(--cor-branco-10);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+#gradient-canvas {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffff;
+    background: linear-gradient(to bottom right, var(--gradient-color-1), var(--gradient-color-2) 50%, var(--gradient-color-3) 50%, var(--gradient-color-4));
+    clip-path: polygon(0 0, 100% 0, 100% 36%, 0 76%);
+    position: absolute;
+    z-index: -1;
+}
+
+.container-main {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+}

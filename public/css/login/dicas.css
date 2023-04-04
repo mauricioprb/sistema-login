@@ -1,0 +1,19 @@
+.dicas-tag {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-branco-20);
+    max-width: max-content;
+    padding: 2px 8px;
+    gap: 4px;
+    border-radius: 6px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.dicas-texto {
+    color: var(--cor-cinza-escuro);
+}
+
+.dicas-senha {
+    color: var(--cor-principal);
+}
