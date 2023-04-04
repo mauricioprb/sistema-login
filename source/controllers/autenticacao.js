@@ -12,7 +12,7 @@ async function postLogin(req, res) {
     const { email, senha } = req.body;
 
     try {
-        if (await autenticacao.autenticarLogin(email, senha)) {
+        if (await autenticacao.autenticarUsuario(email, senha)) {
             const usuario = await autenticacao.criarSessao(email);
             req.session.usuario = usuario;
             res.redirect("/dashboard");
