@@ -12,14 +12,15 @@ async function postLogin(req, res) {
     const { email, senha } = req.body;
 
     try {
-        if (await autenticacao.autenticarUsuario(email, senha)) {
+        const resultadoAutenticacao = await autenticacao.autenticarUsuario(email, senha);
+        if (resultadoAutenticacao.success) {
             const usuario = await autenticacao.criarSessao(email);
             req.session.usuario = usuario;
             res.redirect("/dashboard");
         } else {
             res.render("autenticacao/login", {
                 title: "Faça Login na Plataforma",
-                erro: "E-mail ou senha incorretos.",
+                erro: resultadoAutenticacao.message,
             });
         }
     } catch (err) {

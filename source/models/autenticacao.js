@@ -14,8 +14,7 @@ async function autenticarUsuario(login, senha) {
 
     // Verifica se o usuário está bloqueado antes de tentar fazer o login
     if (rowsBloqueio.length > 0 && rowsBloqueio[0].bloqueado === 1) {
-        console.log(`Usuário ${login} está bloqueado.`);
-        return false;
+        return { success: false, message: "Usuário bloqueado! Por favor entrar em contato." };
     }
 
     // Tenta fazer o login normalmente
@@ -28,7 +27,7 @@ async function autenticarUsuario(login, senha) {
     if (rowsLogin.length > 0) {
         // Limpa as tentativas falhas do usuário se ele logar com sucesso
         delete tentativasFalhas[login];
-        return true;
+        return { success: true };
     } else {
         // Incrementa o contador de tentativas falhas para o usuário
         tentativasFalhas[login] = (tentativasFalhas[login] || 0) + 1;
@@ -36,9 +35,10 @@ async function autenticarUsuario(login, senha) {
         // Se o usuário atingir o limite de tentativas, invalida sua sessão e retorna false
         if (tentativasFalhas[login] >= 3) {
             bloquearUsuario(login);
+            return { success: false, message: "Usuário bloqueado! Por favor entrar em contato." };
         }
 
-        return false;
+        return { success: false, message: "E-mail ou senha incorretos." };
     }
 }
 
