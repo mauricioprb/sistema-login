@@ -4,10 +4,6 @@ async function getLogin(req, res) {
     res.render("autenticacao/login", { title: "Faça Login na Plataforma" });
 }
 
-async function getRecuperacaoSenha(req, res) {
-    res.render("autenticacao/recuperacao-senha", { title: "Recuperação de Senha" });
-}
-
 async function postLogin(req, res) {
     const { email, senha } = req.body;
 
@@ -34,6 +30,5 @@ async function postLogin(req, res) {
 
 module.exports = {
     getLogin,
-    getRecuperacaoSenha,
-    postLogin,
+    postLogin
 };

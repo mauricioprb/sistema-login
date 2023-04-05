@@ -1,5 +1,6 @@
 const express = require("express");
 const dashboard = require("../controllers/dashboard");
+const login = require("../models/login");
 const router = express.Router();
 
 function verificarSessao(req, res, next) {
@@ -9,7 +10,6 @@ function verificarSessao(req, res, next) {
         next();
     }
 }
-
 
 router.get("/", verificarSessao, dashboard.getDashboard.bind(dashboard));
 
