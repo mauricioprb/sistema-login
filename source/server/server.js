@@ -3,6 +3,8 @@ const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 
+require('dotenv').config();
+
 const principais = require("../routes/principais");
 const dashboard = require("../routes/dashboard")
 
@@ -13,7 +15,7 @@ function iniciarServidor() {
     app.use(express.static("public"));
 
     app.use(session({
-        secret: "secreto",
+        secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false
     }));

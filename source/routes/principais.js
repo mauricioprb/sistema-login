@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 
 const principal = require("../controllers/principal");
-const autenticacao = require("../controllers/autenticacao");
+const login = require("../controllers/login");
 
 // Rota principal
 router.get("/", principal.getIndex.bind(principal));
 
 // Rotas de Autenticação
-router.get("/login", autenticacao.getLogin.bind(autenticacao));
-router.post("/login", autenticacao.postLogin.bind(autenticacao));
-router.get("/recuperacao-senha", autenticacao.getRecuperacaoSenha.bind(autenticacao));
+router.get("/login", login.getLogin.bind(login));
+router.post("/login", login.postLogin.bind(login));
+router.get("/recuperacao-senha", login.getRecuperacaoSenha.bind(login));
 
 module.exports = router;

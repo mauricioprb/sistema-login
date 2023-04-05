@@ -14,7 +14,7 @@ async function autenticarUsuario(login, senha) {
 
     // Verifica se o usuário está bloqueado antes de tentar fazer o login
     if (rowsBloqueio.length > 0 && rowsBloqueio[0].bloqueado === 1) {
-        return { success: false, message: "Usuário bloqueado! Por favor entrar em contato." };
+        return { success: false, message: "Usuário bloqueado! Por favor, entre em contato." };
     }
 
     // Tenta fazer o login normalmente
@@ -35,7 +35,7 @@ async function autenticarUsuario(login, senha) {
         // Se o usuário atingir o limite de tentativas, invalida sua sessão e retorna false
         if (tentativasFalhas[login] >= 3) {
             bloquearUsuario(login);
-            return { success: false, message: "Usuário bloqueado! Por favor entrar em contato." };
+            return { success: false, message: "Usuário bloqueado! Por favor, entre em contato." };
         }
 
         return { success: false, message: "E-mail ou senha incorretos." };
@@ -53,8 +53,30 @@ async function bloquearUsuario(login) {
     console.log(`Usuário ${login} bloqueado após 3 tentativas de login malsucedidas.`);
 }
 
-async function criarSessao(email) {
+async function criarSessao(login) {
+    const connection = await getConnection();
 
+    const [rows] = await connection.execute(
+        "SELECT * FROM usuarios WHERE email = ? OR user_name = ?",
+        [login, login]
+    );
+
+    const usuario = rows[0];
+
+    // Atualiza a tabela de usuários com a data e hora do último login
+    await connection.execute(
+        "UPDATE usuarios SET ultimo_login = ? WHERE email = ? OR user_name = ?",
+        [new Date(), usuario.email, usuario.user_name]
+    );
+
+    await connection.end();
+
+    return {
+        id_usuario: usuario.id,
+        nome: usuario.nome,
+        email: usuario.email,
+        user_name: usuario.user_name
+    };
 }
 
 module.exports = {

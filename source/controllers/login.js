@@ -1,4 +1,4 @@
-const autenticacao = require("../models/autenticacao");
+const login = require("../models/login");
 
 async function getLogin(req, res) {
     res.render("autenticacao/login", { title: "Faça Login na Plataforma" });
@@ -12,9 +12,9 @@ async function postLogin(req, res) {
     const { email, senha } = req.body;
 
     try {
-        const resultadoAutenticacao = await autenticacao.autenticarUsuario(email, senha);
+        const resultadoAutenticacao = await login.autenticarUsuario(email, senha);
         if (resultadoAutenticacao.success) {
-            const usuario = await autenticacao.criarSessao(email);
+            const usuario = await login.criarSessao(email);
             req.session.usuario = usuario;
             res.redirect("/dashboard");
         } else {
