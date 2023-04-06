@@ -74,6 +74,6 @@ VALUES('Teste da Silva', '01/01/1990', '123.456.789-00', 'SEU EMAIL AQUI', 'test
 
 ### Observações
 
-Lembre-se de configurar corretamente o arquivo `.env`. É necessário criar uma conta no serviço [Sendinblue](https://pt.sendinblue.com/), para vincular o e-mail que irá realizar a funcionalidade de recuperação de senha.
+Não se esqueça de configurar corretamente o arquivo `.env`. É necessário criar uma conta no serviço [Sendinblue](https://pt.sendinblue.com/), para vincular o e-mail que irá realizar a funcionalidade de recuperação de senha.
 
 #### Lembre-se de que você deve seguir todos os passos corretamente para garantir que a aplicação funcione corretamente. Se tiver algum problema durante a instalação ou execução da aplicação, verifique se seguiu todas as instruções corretamente e se todas as dependências foram instaladas corretamente.
