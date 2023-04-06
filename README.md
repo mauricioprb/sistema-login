@@ -4,6 +4,13 @@ Este projeto consiste em um sistema de login e recuperação de senha desenvolvi
 
 O sistema é capaz de autenticar usuários com base em suas credenciais de login e recuperar a senha do usuário em caso de esquecimento ou perda. Para implementar essa funcionalidade, foram utilizadas técnicas de criptografia para garantir a segurança das informações do usuário.
 
+<br>
+
+<img src="https://i.ibb.co/YNnyCG9/1.png" alt="Login">
+
+<br>
+
+
 ## Dependências Utilizadas
 
 - [Body Parser](https://www.npmjs.com/package/body-parser)
