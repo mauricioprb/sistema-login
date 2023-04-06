@@ -5,8 +5,9 @@ const sendinBlueTransport = require('nodemailer-sendinblue-transport');
 require('dotenv').config();
 
 async function recuperarSenha(email) {
+    let connection = null;
     try {
-        const connection = await getConnection();
+        connection = await getConnection();
 
         // Verifica se o e-mail fornecido está registrado no banco de dados
         const [rows] = await connection.execute(
@@ -29,7 +30,7 @@ async function recuperarSenha(email) {
 
         // Envia um e-mail ao usuário com a nova senha
         await enviarEmail(email, "Recuperação de senha", `Sua nova senha é: ${novaSenha}`);
-        console.log(novaSenha)
+        console.log(novaSenha); // Comente essa linha quando for para produção
 
         return { success: true, message: "Nova senha enviada por e-mail." };
     } finally {

@@ -34,10 +34,6 @@
     font: 400 0.9rem/1.17 "Roboto", sans-serif;
 }
 
-.formulario-email {
-    margin-bottom: 24px;
-}
-
 /* Remove os estilos padrão do formulário */
 .formulario input:focus {
     outline: none;
@@ -71,6 +67,7 @@
 .formulario-botao-continuar {
     display: inline-block;
     height: 40px;
+    margin-top: 24px;
     margin-bottom: 40px;
     width: 100%;
     background: var(--cor-cinza-escuro);
@@ -103,6 +100,7 @@
 .formulario-senha {
     display: flex;
     justify-content: space-between;
+    margin-top: 24px;
 }
 
 .formulario-senha a {
