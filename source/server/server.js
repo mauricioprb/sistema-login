@@ -34,7 +34,7 @@ function iniciarServidor() {
     app.use("/dashboard", dashboard); // Rotas dashboard
 
     // Iniciando o servidor
-    const PORT = 3000;
+    const PORT = 3250;
     app.listen(PORT, () => {
         console.log("Servidor iniciado na url: http://localhost:3000/login");
     });
