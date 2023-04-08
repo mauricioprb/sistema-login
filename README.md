@@ -76,7 +76,7 @@ Logo após criar o banco e a tabela é necessário iserir um usuário genérico,
 ```sql
 INSERT INTO usuarios
 (nome, data_nascimento, cpf, email, user_name, senha, ultimo_login, bloqueado, excluido)
-VALUES('Teste da Silva', '01/01/1990', '123.456.789-00', 'SEU EMAIL AQUI', 'teste.silva', MD5('senha123'), '2023-04-05 21:43:41', 0, 0);
+VALUES('Teste da Silva', '1990-01-01', '123.456.789-00', 'SEU EMAIL AQUI', 'teste.silva', MD5('senha123'), '2023-04-05 21:43:41', 0, 0);
 ```
 
 ### Observações
