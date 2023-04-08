@@ -2,10 +2,12 @@
     "name": "deploy-sistema-login",
     "version": "1.0.0",
     "public": true,
-    "build": {
-        "src": "app.js",
-        "use": "@versel/node"
-    },
+    "build": [     
+        {
+            "src": "app.js",
+            "use": "@versel/node"
+        }
+    ],
     "routes": [
         {
             "src": "(.*)",
