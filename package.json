@@ -4,7 +4,7 @@
   "description": "Sistema de login e recuperação de senha",
   "main": "app.js",
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node app.js",
