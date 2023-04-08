@@ -5,7 +5,7 @@
     "builds": [     
         {
             "src": "app.js",
-            "use": "@versel/node"
+            "use": "@vercel/node"
         }
     ],
     "routes": [
