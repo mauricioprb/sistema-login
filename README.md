@@ -32,6 +32,7 @@ O sistema é capaz de autenticar usuários com base em suas credenciais de login
 - **MySQL** - SGDB
 - **DBeaver** - Database Tools
 - **Nodemon.js** - Produtividade
+- **Microsoft Azure** - Hospedagem
 
 ## Instalação
 
